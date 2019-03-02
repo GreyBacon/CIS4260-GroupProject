@@ -3,12 +3,6 @@
 require_once('database.php');
 require('category_db.php');
 
-// Get category id's
-/*if (!isset($Category_id)) {
-    $Category_id = filter_input(INPUT_GET, 'Category_id', FILTER_VALIDATE_INT);
-    
-}*/
-
 $categories = get_categories();
 
 ?>
@@ -20,9 +14,16 @@ $categories = get_categories();
     </head>
     <body class="flexbox-container">
     <div class="mainBody">
-        <?php 
-        
-        ?>
+    <aside>
+        <h1>Categories</h1>
+        <ul>
+            <?php foreach($categories as $category) : ?>
+            <li>
+                <?php echo $category['category_id']; ?>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+    </aside>
     </div>
     </body>
 </html>
