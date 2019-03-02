@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 1, 2019, 5:41:18 PM
+    Author     : GreyBacon
+*/
+
+html {
+    background-color: lightgrey;
+}
+
+.flexbox-container {
+    display:flex;
+    justify-content: center;
+}
+
+.mainBody {
+    background-color: whitesmoke;
+    min-width: 800px;
+    min-height: 300px;
+}
