@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2019 at 10:04 PM
+-- Generation Time: Mar 02, 2019 at 06:59 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -29,15 +29,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `category_db` (
-  `Category_id` int(1) NOT NULL,
-  `Category` varchar(6) DEFAULT NULL
+  `category_id` int(1) NOT NULL,
+  `category` varchar(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `category_db`
 --
 
-INSERT INTO `category_db` (`Category_id`, `Category`) VALUES
+INSERT INTO `category_db` (`category_id`, `category`) VALUES
 (1, 'Action'),
 (2, 'RPG'),
 (3, 'Sports');
@@ -49,19 +49,19 @@ INSERT INTO `category_db` (`Category_id`, `Category`) VALUES
 --
 
 CREATE TABLE `game_db` (
-  `Game_id` int(2) NOT NULL,
-  `Game` varchar(30) DEFAULT NULL,
-  `Category_id` int(1) DEFAULT NULL,
-  `Image` varchar(14) DEFAULT NULL,
-  `Price` decimal(4,2) DEFAULT NULL,
-  `Release Date` varchar(12) DEFAULT NULL
+  `game_id` int(2) NOT NULL,
+  `game` varchar(30) DEFAULT NULL,
+  `category_id` int(1) DEFAULT NULL,
+  `image` varchar(14) DEFAULT NULL,
+  `price` decimal(4,2) DEFAULT NULL,
+  `releaseDate` varchar(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='game_db';
 
 --
 -- Dumping data for table `game_db`
 --
 
-INSERT INTO `game_db` (`Game_id`, `Game`, `Category_id`, `Image`, `Price`, `Release Date`) VALUES
+INSERT INTO `game_db` (`game_id`, `game`, `category_id`, `image`, `price`, `releaseDate`) VALUES
 (1, 'NieR:Automata', 1, '1551200632.jpg', '39.99', 'Mar 17, 2017'),
 (2, 'Rocket League', 1, '1549059561.jpg', '19.99', 'Jul 7, 2015'),
 (3, 'Grand Theft Auto V', 1, '1544815097.jpg', '29.99', 'Apr 14, 2015'),
@@ -115,14 +115,14 @@ INSERT INTO `game_db` (`Game_id`, `Game`, `Category_id`, `Image`, `Price`, `Rele
 -- Indexes for table `category_db`
 --
 ALTER TABLE `category_db`
-  ADD PRIMARY KEY (`Category_id`);
+  ADD PRIMARY KEY (`category_id`);
 
 --
 -- Indexes for table `game_db`
 --
 ALTER TABLE `game_db`
-  ADD PRIMARY KEY (`Game_id`),
-  ADD KEY `Category_id` (`Category_id`);
+  ADD PRIMARY KEY (`game_id`),
+  ADD KEY `Category_id` (`category_id`);
 
 --
 -- Constraints for dumped tables
