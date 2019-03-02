@@ -19,6 +19,11 @@ html {
 
 .mainBody {
     background-color: whitesmoke;
-    min-width: 800px;
+    min-width: 600px;
     min-height: 300px;
+    text-align: center;
 }
+.mainBody>* {
+
+}
+

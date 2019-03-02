@@ -9,21 +9,21 @@ $categories = get_categories();
 <html>
     <head>
         <meta charset="UTF-8"> 
-        <title>Products</title>
+        <title>Games</title>
         <link rel="stylesheet" type="text/css" href="main.css" />
     </head>
     <body class="flexbox-container">
     <div class="mainBody">
-    <aside>
-        <h1>Categories</h1>
+        <h1>Select a category</h1>
         <ul>
             <?php foreach($categories as $category) : ?>
             <li>
-                <?php echo $category['category_id']; ?>
+                <a href="?category= <?php echo $category['category_id']?>">
+                   <?php echo $category['category']?> </a>
+
             </li>
             <?php endforeach; ?>
         </ul>
-    </aside>
     </div>
     </body>
 </html>
