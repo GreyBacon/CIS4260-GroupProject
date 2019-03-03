@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Group Project</title>
+    <title>Games</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>

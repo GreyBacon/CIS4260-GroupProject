@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Group Project</title>
+    <title>Games</title>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
     <header>
-        <h1>My Guitar Shop</h1>
+        <h1>Games</h1>
     </header>
     <main>
         <h1>Add Item</h1>
