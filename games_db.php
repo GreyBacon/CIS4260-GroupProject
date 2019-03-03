@@ -1,5 +1,5 @@
 <?php
-function get_games($category_id) {
+function get_games($category_id) {                      // Returns the games fitting given category id
     global $db;
     $query = 'SELECT * FROM game_db
               WHERE category_id = :category_id
@@ -11,7 +11,7 @@ function get_games($category_id) {
     $statement->closeCursor();
     return $games;    
 }
-function get_detail($game_id) {
+function get_detail($game_id) {                         // Returns the game given game id
     global $db;
     $query =    'SELECT * FROM game_db
                 WHERE game_id =:game_id;';
