@@ -2,6 +2,8 @@
 <?php
 require_once('database.php');
 require('category_db.php');
+require('games_db.php');
+
 $categories = get_categories();
 
 ?>
@@ -14,7 +16,7 @@ $categories = get_categories();
     <body class="flexbox-container">
         <div class="mainBody">
             <?php include 'categoryLeft.php';?>
-            <div class="sideRight">
+        <div class="sideRight">
             <?php include 'gamesRight.php';?>
         </div>
         </div>

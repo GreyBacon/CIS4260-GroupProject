@@ -10,7 +10,7 @@ function get_categories() {
     return $categories;    
 }
 
-function get_category_name($category_id) {
+/*function get_category_name($category_id) {
     global $db;
     $query = 'SELECT * FROM category_db
               WHERE category_id = :category_id';    
@@ -21,7 +21,7 @@ function get_category_name($category_id) {
     $statement->closeCursor();    
     $category_name = $category['categoryName'];
     return $category_name;
-}
+}*/
 
 
 ?>
