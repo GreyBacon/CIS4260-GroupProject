@@ -1,8 +1,11 @@
 <?php
-require_once('cart.php');
-
+$lifetime = 60 * 60 * 24 * 14;    
+session_set_cookie_params($lifetime, '/');
+session_start();
 if (empty($_SESSION['cart12'])) { $_SESSION['cart12'] = array(); }
+
 // Get the action to perform
+require_once('cart.php');
 $action = filter_input(INPUT_POST, 'action');
 if ($action === NULL) {
     $action = filter_input(INPUT_GET, 'action');
