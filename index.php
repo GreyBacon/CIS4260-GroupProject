@@ -5,7 +5,7 @@ require('category_db.php');
 require('games_db.php');
 
 $categories = get_categories();
-
+$view = filter_input(INPUT_GET, 'view');
 ?>
 <html>
     <head>
@@ -15,9 +15,18 @@ $categories = get_categories();
     </head>
     <body class="flexbox-container">
         <div class="mainBody">
-            <?php include 'categoryLeft.php';?>
-        <div class="sideRight">
-            <?php include 'gamesRight.php';?>
+            <?php include 'categoryLeft.php';?> <!-- shows the categories, likely not changed-->
+        <div class="sideRight"> <!-- What shows up on the right/main area, add your include in this area to change the view-->
+            <?php if($view==='cart') {
+                //add cart include here if applicable
+            }
+            else if($view==='detail') {
+                //add detail view here (ken) 
+            }
+            else {
+                include 'gamesRight.php';
+            }
+           ?>
         </div>
         </div>
     </body>
