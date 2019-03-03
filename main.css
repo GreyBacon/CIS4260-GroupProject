@@ -25,6 +25,7 @@ html {
     background-color:lightblue;
     order:1;
     flex-direction: column;
+    padding: 20px;
 }
 .category_left > li {
     padding-bottom: 20px;
@@ -34,4 +35,5 @@ html {
     background-color:lightyellow; 
     order:2;
     flex-direction: column;
+    padding: 20px;
 }
