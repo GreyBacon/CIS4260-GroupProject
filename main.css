@@ -18,12 +18,29 @@ html {
 }
 
 .mainBody {
+    display:flex;
     background-color: whitesmoke;
     min-width: 600px;
-    min-height: 300px;
+    min-height: 400px;
+}
+.games_right > h1 {
     text-align: center;
 }
-.mainBody>* {
-
+.category_left > h1 {
+    text-align: center;
 }
-
+.category_left{
+    flex:1;
+    background-color:lightblue;
+    order:1;
+    flex-direction: column;
+}
+.category_left > li {
+    padding-bottom: 20px;
+}
+.games_right {
+    flex:3;
+    background-color:lightyellow; 
+    order:2;
+    flex-direction: column;
+}

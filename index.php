@@ -54,17 +54,9 @@ switch($action) {
         <link rel="stylesheet" type="text/css" href="main.css" />
     </head>
     <body class="flexbox-container">
-    <div class="mainBody">
-        <h1>Select a category</h1>
-        <ul>
-            <?php foreach($categories as $category) : ?>
-            <li>
-                <a href="?category= <?php echo $category['category_id']?>">
-                   <?php echo $category['category']?> </a>
-
-            </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
+        <div class="mainBody">
+<?php include 'categoryLeft.php';?>
+<?php include 'gamesRight.php';?>
+        </div>
     </body>
 </html>
