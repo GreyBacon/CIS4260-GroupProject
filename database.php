@@ -1,5 +1,5 @@
  <?php
-$servername = 'mysql:host=localhost;dbname=groupproject_db';
+$servername = 'mysql:host=localhost;dbname=groupproject_db';        //Connects with the SQL server, usually want to use with global $db 
 $username = 'root';
 $password = '';
 
