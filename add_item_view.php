@@ -5,26 +5,26 @@
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-    <header>
+    <!--<header>
         <h1>Games</h1>
     </header>
     <main>
-        <h1>Add Item</h1>
+        <h1>Add Item</h1>-->
         <form action="." method="post">
             <input type="hidden" name="action" value="add">
 
-            <label>Name:</label>
+            <!--<label>Name:</label>
             <select name="productkey">
-            <?php foreach($products as $key => $product) :
+            <?php /* foreach($products as $key => $product) :
                 $cost = number_format($product['cost'], 2);
                 $name = $product['name'];
                 $item = $name . ' ($' . $cost . ')';
-            ?>
-                <option value="<?php echo $key; ?>">
-                    <?php echo $item; ?>
+            */?>
+                <option value="<?php/* echo $key; */?>">
+                    <?php/* echo $item; */?>
                 </option>
-            <?php endforeach; ?>
-            </select><br>
+            <?php/* endforeach; */?>
+            </select><br>-->
 
             <label>Quantity:</label>
             <select name="itemqty">

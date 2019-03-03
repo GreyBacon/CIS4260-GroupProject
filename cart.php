@@ -5,8 +5,8 @@ function add_item($key, $quantity) {
     if ($quantity < 1) return;
 
     // If item already exists in cart, update quantity
-    if (isset($_SESSION['cart12'][$key])) {
-        $quantity += $_SESSION['cart12'][$key]['qty'];
+    if (isset($_SESSION['game'][$key])) {
+        $quantity += $_SESSION['game'][$key]['qty'];
         update_item($key, $quantity);
         return;
     }
@@ -20,20 +20,20 @@ function add_item($key, $quantity) {
         'qty'  => $quantity,
         'total' => $total
     );
-    $_SESSION['cart12'][$key] = $item;
+    $_SESSION['game'][$key] = $item;
 }
 
 // Update an item in the cart
 function update_item($key, $quantity) {
     $quantity = (int) $quantity;
-    if (isset($_SESSION['cart12'][$key])) {
+    if (isset($_SESSION['game'][$key])) {
         if ($quantity <= 0) {
-            unset($_SESSION['cart12'][$key]);
+            unset($_SESSION['game'][$key]);
         } else {
-            $_SESSION['cart12'][$key]['qty'] = $quantity;
-            $total = $_SESSION['cart12'][$key]['cost'] *
-                     $_SESSION['cart12'][$key]['qty'];
-            $_SESSION['cart12'][$key]['total'] = $total;
+            $_SESSION['game'][$key]['qty'] = $quantity;
+            $total = $_SESSION['game'][$key]['cost'] *
+                     $_SESSION['game'][$key]['qty'];
+            $_SESSION['game'][$key]['total'] = $total;
         }
     }
 }
@@ -41,7 +41,7 @@ function update_item($key, $quantity) {
 // Get cart subtotal
 function get_subtotal() {
     $subtotal = 0;
-    foreach ($_SESSION['cart12'] as $item) {
+    foreach ($_SESSION['game'] as $item) {
         $subtotal += $item['total'];
     }
     $subtotal_f = number_format($subtotal, 2);

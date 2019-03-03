@@ -10,8 +10,8 @@
     </header>
     <main>
         <h1>Your Cart</h1>
-        <?php if (empty($_SESSION['cart12']) || 
-                  count($_SESSION['cart12']) == 0) : ?>
+        <?php if (empty($_SESSION['game']) || 
+                  count($_SESSION['game']) == 0) : ?>
             <p>There are no items in your cart.</p>
         <?php else: ?>
             <form action="." method="post">
@@ -24,7 +24,7 @@
                     <th class="right">Item Total</th>
                 </tr>
 
-            <?php foreach( $_SESSION['cart12'] as $key => $item ) :
+            <?php foreach( $_SESSION['game'] as $key => $item ) :
                 $cost  = number_format($item['cost'],  2);
                 $total = number_format($item['total'], 2);
             ?>
