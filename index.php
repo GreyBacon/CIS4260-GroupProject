@@ -16,12 +16,13 @@ $view = filter_input(INPUT_GET, 'view');
     <body class="flexbox-container">
         <div class="mainBody">
             <?php include 'categoryLeft.php';?> <!-- shows the categories, likely not changed-->
+            <?php echo $view; ?>
         <div class="sideRight"> <!-- What shows up on the right/main area, add your include in this area to change the view-->
             <?php if($view==='cart') {
                 //add cart include here if applicable
             }
-            else if($view==='detail') {
-                //add detail view here (ken) 
+            else if($view=='detail') {
+                include 'detail.php'; 
             }
             else {
                 include 'gamesRight.php';

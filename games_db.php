@@ -11,17 +11,15 @@ function get_games($category_id) {
     $statement->closeCursor();
     return $games;    
 }
-/*function get_category_name($category_id) {
+function get_detail($game_id) {
     global $db;
-    $query = 'SELECT * FROM category_db
-              WHERE category_id = :category_id';    
+    $query =    'SELECT * FROM game_db
+                WHERE game_id =:game_id;';
     $statement = $db->prepare($query);
-    $statement->bindValue(':category_id', $category_id);
-    $statement->execute();    
-    $category = $statement->fetch();
-    $statement->closeCursor();    
-    $category_name = $category['categoryName'];
-    return $category_name;
-}*/
-
+    $statement->bindValue(':game_id', $game_id);
+    $statement->execute();
+    $games = $statement->fetch();
+    $statement->closeCursor();
+    return $game_detail;    
+}
 ?>
