@@ -13,8 +13,10 @@ $categories = get_categories();
     </head>
     <body class="flexbox-container">
         <div class="mainBody">
-<?php include 'categoryLeft.php';?>
-<?php include 'gamesRight.php';?>
+            <?php include 'categoryLeft.php';?>
+            <div class="sideRight">
+            <?php include 'gamesRight.php';?>
+        </div>
         </div>
     </body>
 </html>

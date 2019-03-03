@@ -23,7 +23,7 @@ html {
     min-width: 600px;
     min-height: 400px;
 }
-.games_right > h1 {
+.sideRight > h1 {
     text-align: center;
 }
 .category_left > h1 {
@@ -38,7 +38,7 @@ html {
 .category_left > li {
     padding-bottom: 20px;
 }
-.games_right {
+.sideRight {
     flex:3;
     background-color:lightyellow; 
     order:2;
