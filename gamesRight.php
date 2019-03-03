@@ -7,7 +7,7 @@
     <?php foreach($games as $game) : ?>
     <li>
         <?php //echo $game['game']?>
-        <a href="?game=<?php echo $game['game_id']?>?view=detail">
+        <a href="?game=<?php echo $game['game_id']?>&view=detail">
                            <?php echo $game['game']?> </a>
     </li>
     <?php endforeach; ?>

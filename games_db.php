@@ -18,7 +18,7 @@ function get_detail($game_id) {
     $statement = $db->prepare($query);
     $statement->bindValue(':game_id', $game_id);
     $statement->execute();
-    $games = $statement->fetch();
+    $game_detail = $statement->fetch();
     $statement->closeCursor();
     return $game_detail;    
 }
