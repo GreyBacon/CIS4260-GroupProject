@@ -27,17 +27,19 @@ if ($action === NULL) {
 // Add or update cart as needed
 switch($action) {
     case 'add':
-        $game_id = filter_input(INPUT_GET, 'game');
+        //$game_id = filter_input(INPUT_GET, 'game');
+        //$game = get_detail($game_id);
         $item_qty = filter_input(INPUT_POST, 'itemqty');
         add_item($game_id, $item_qty);
+        //echo $game['price'];
         include('cart_view.php');
         break;
     case 'update':
         $new_qty_list = filter_input(INPUT_POST, 'newqty', FILTER_DEFAULT, 
                                      FILTER_REQUIRE_ARRAY);
-        foreach($new_qty_list as $key => $qty) {
-            if ($_SESSION['game'][$key]['qty'] != $qty) {
-                update_item($key, $qty);
+        foreach($new_qty_list as $game => $qty) {
+            if ($_SESSION['game'][$game]['qty'] != $qty) {
+                update_item($game_id, $qty);
             }
         }
         include('cart_view.php');

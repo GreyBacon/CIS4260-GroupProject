@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+
 <head>
     <title>Games</title>
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -7,20 +7,23 @@
 <body>
     <!--<header>
         <h1>Games</h1>
-    </header>
+    </header>-->
     <main>
-        <h1>Add Item</h1>-->
-        <form action="." method="post">
+        <!--<h1>Add Item</h1>-->
+        <form action="
+            <?php 
+                echo "./index.php?view=detail"."&game=".$game_id;
+            ?>" method="post">
             <input type="hidden" name="action" value="add">
 
             <!--<label>Name:</label>
-            <select name="productkey">
-            <?php /* foreach($products as $key => $product) :
+            <select name="productgame">-->
+            <?php /* foreach($products as $game => $product) :
                 $cost = number_format($product['cost'], 2);
                 $name = $product['name'];
                 $item = $name . ' ($' . $cost . ')';
-            */?>
-                <option value="<?php/* echo $key; */?>">
+            */ ?>
+            <!--    <option value="<?php/* echo $game; */?>">
                     <?php/* echo $item; */?>
                 </option>
             <?php/* endforeach; */?>
@@ -34,11 +37,15 @@
                 </option>
             <?php endfor; ?>
             </select><br>
+            
 
             <label>&nbsp;</label>
-            <input type="submit" value="Add Item">
+            <input type="submit" value="add">
         </form>
-        <p><a href=".?action=show_cart">View Cart</a></p>    
+        <p><a href="
+            <?php 
+                echo "./index.php?view=cart_view"."&game=".$game_id;
+            ?>">View Cart</a></p>    
     </main>
 </body>
-</html>
+ 

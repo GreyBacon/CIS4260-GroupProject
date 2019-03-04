@@ -14,7 +14,7 @@
                   count($_SESSION['game']) == 0) : ?>
             <p>There are no items in your cart.</p>
         <?php else: ?>
-            <form action="." method="post">
+            <form action="./index.php?view=" method="post">
             <input type="hidden" name="action" value="update">
             <table>
                 <tr id="cart_header">
@@ -24,7 +24,7 @@
                     <th class="right">Item Total</th>
                 </tr>
 
-            <?php foreach( $_SESSION['game'] as $key => $item ) :
+            <?php foreach( $_SESSION['game'] as $game => $item ) :
                 $cost  = number_format($item['cost'],  2);
                 $total = number_format($item['total'], 2);
             ?>
@@ -37,7 +37,7 @@
                     </td>
                     <td class="right">
                         <input type="text" class="cart_qty"
-                            name="newqty[<?php echo $key; ?>]"
+                            name="newqty[<?php echo $game; ?>]"
                             value="<?php echo $item['qty']; ?>">
                     </td>
                     <td class="right">

@@ -3,8 +3,11 @@ $lifetime = 60 * 60 * 24 * 14;
 session_set_cookie_params($lifetime, '/');
 session_start();
 if (empty($_SESSION['cart12'])) { $_SESSION['cart12'] = array(); }
-
-// Get the action to perform
+$query = mysqli_query("SELECT * FROM game_db");
+$cart12 = array();
+while($row = mysqli_fetch_assoc($query)){
+   $cart12[] = $row;
+}
 require_once('cart.php');
 $action = filter_input(INPUT_POST, 'action');
 if ($action === NULL) {
