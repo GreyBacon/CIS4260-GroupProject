@@ -1,3 +1,9 @@
+<?php
+    $game_id = filter_input(INPUT_POST, 'game_id');        
+    $game_name = filter_input(INPUT_POST, 'game_name');
+    $game_price = filter_input(INPUT_POST, 'game_price');   
+    $cartNumber = filter_input(INPUT_POST, 'cartNumber')
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,10 +11,18 @@
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-    <header>
+    <!--<header>
         <h1>Games</h1>
-    </header>
-    <main>
+    </header>commenting out duplicate header-->
+    <main> 
+                                                            <!-- delete this part when you're done its just a sample to make it easy to see the variables -->
+        <?php
+            echo 'number in the shopping cart is '.$cartNumber;
+            echo '<br/>game id is '.$game_id;
+            echo '<br/>game name is '.$game_name;
+            echo '<br/>game price is '.$game_price;
+        ?>
+                                                            <!-- part to delete ends here-->
         <h1>Your Cart</h1>
         <?php if (empty($_SESSION['game']) || 
                   count($_SESSION['game']) == 0) : ?>

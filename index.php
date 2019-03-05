@@ -28,9 +28,7 @@ if ($view === NULL) {
         <div class="mainBody">          <!-- Main box housing the page -->
             <?php include 'categoryLeft.php';?> <!-- shows the categories, likely not changed-->
         <div class="sideRight"> <!-- What shows up on the right/main area, add your include in this area to change the view-->
-            <?php if($view==='cart') {
-                include 'cart.php';
-            }else if($view == 'cart_view'){
+            <?php if($view === 'cart_view'){
                 include 'cart_view.php';
             }
             else if($view==='detail') {
